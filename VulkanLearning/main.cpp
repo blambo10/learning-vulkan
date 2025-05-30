@@ -16,10 +16,9 @@ const std::vector<const char*> validationLayers = {
 };
 
 #ifdef DEBUG
-    const bool enableValidationLayers = false;
-//    std::cout << "debug";
-#else
     const bool enableValidationLayers = true;
+#else
+    const bool enableValidationLayers = false;
 #endif
 
 class HelloTriangleApplication {
@@ -47,8 +46,13 @@ private:
         glfwWindowHint(GLFW_RESIZABLE, GLFW_FALSE);
         window = glfwCreateWindow(WIDTH, HEIGHT, WND_TITLE, nullptr, nullptr);
     }
-    
+
     void initVulkan() {
+        if (enableValidationLayers){
+            std::cout << "Debug enabled";
+        } else {
+            std::cout << "Debug not enabled";
+        }
         createInstance();
         setupDebugMessenger();
     }
@@ -96,10 +100,8 @@ private:
         if (enableValidationLayers && !checkValidationLayerSupport()) {
             throw std::runtime_error("validation layers requested, but not available!");
         }
-        
-        auto extensions = getRequiredExtensions();
 
-        glfwExtensions = glfwGetRequiredInstanceExtensions(&glfwExtensionCount);
+//        glfwExtensions = glfwGetRequiredInstanceExtensions(&glfwExtensionCount);
         
         VkApplicationInfo appInfo{};
         appInfo.sType = VK_STRUCTURE_TYPE_APPLICATION_INFO;
@@ -112,19 +114,13 @@ private:
         VkInstanceCreateInfo createInfo{};
         createInfo.sType = VK_STRUCTURE_TYPE_INSTANCE_CREATE_INFO;
         createInfo.pApplicationInfo = &appInfo;
-        createInfo.enabledExtensionCount = glfwExtensionCount;
-        createInfo.ppEnabledExtensionNames = glfwExtensions;
-        createInfo.enabledLayerCount = 0;
         
-        loadExtensions();
+        auto extensions = getRequiredExtensions();
         
         createInfo.flags |= VK_INSTANCE_CREATE_ENUMERATE_PORTABILITY_BIT_KHR;
         
         createInfo.enabledExtensionCount = static_cast<uint32_t>(extensions.size());
         createInfo.ppEnabledExtensionNames = extensions.data();
-        
-        createInfo.enabledExtensionCount = (uint32_t) requiredExtensions.size();
-        createInfo.ppEnabledExtensionNames = requiredExtensions.data();
         
         VkDebugUtilsMessengerCreateInfoEXT debugCreateInfo{};
         
@@ -146,33 +142,7 @@ private:
             throw std::runtime_error("failed to create instance! fuck");
         }
     }
-    
-    void loadExtensions() {
-        vkEnumerateInstanceExtensionProperties(nullptr, &extensionCount, nullptr);
-        
-        std::vector<VkExtensionProperties> supportedExtensions(extensionCount);
-        
-        vkEnumerateInstanceExtensionProperties(nullptr, &extensionCount,    supportedExtensions.data());
-        
-        for(uint32_t i = 0; i < glfwExtensionCount; i++) {
-            bool extensionFound = false;
-            
-            for (const auto& supportedExtension : supportedExtensions) {
-                if (*glfwExtensions[i] == *supportedExtension.extensionName) {
-                    extensionFound = true;
-                }
-            }
-            
-            if (!extensionFound) {
-                throw std::runtime_error("Missing Required Extensions");
-            }
-            
-            requiredExtensions.emplace_back(glfwExtensions[i]);
-        }
-
-        requiredExtensions.emplace_back(VK_KHR_PORTABILITY_ENUMERATION_EXTENSION_NAME);
-    }
-    
+      
     std::vector<const char*> getRequiredExtensions() {
         uint32_t glfwExtensionCount = 0;
         const char** glfwExtensions;
@@ -184,6 +154,7 @@ private:
             extensions.push_back(VK_EXT_DEBUG_UTILS_EXTENSION_NAME);
         }
 
+        extensions.push_back(VK_KHR_PORTABILITY_ENUMERATION_EXTENSION_NAME);
         return extensions;
     }
     

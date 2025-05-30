@@ -305,6 +305,10 @@
 					/opt/homebrew/include,
 					/usr/local/lib/VulkanSDK/1.4.313.0/macOS/include,
 				);
+				LD_RUNPATH_SEARCH_PATHS = (
+					/opt/homebrew/lib,
+					/usr/local/lib/VulkanSDK/1.4.313.0/macOS/lib,
+				);
 				LIBRARY_SEARCH_PATHS = (
 					/opt/homebrew/lib,
 					/usr/local/lib/VulkanSDK/1.4.313.0/macOS/lib,
@@ -321,6 +325,10 @@
 				HEADER_SEARCH_PATHS = (
 					/opt/homebrew/include,
 					/usr/local/lib/VulkanSDK/1.4.313.0/macOS/include,
+				);
+				LD_RUNPATH_SEARCH_PATHS = (
+					/opt/homebrew/lib,
+					/usr/local/lib/VulkanSDK/1.4.313.0/macOS/lib,
 				);
 				LIBRARY_SEARCH_PATHS = (
 					/opt/homebrew/lib,
