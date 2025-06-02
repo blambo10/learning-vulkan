@@ -7,12 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		36CB649D2DE47E1F00D28071 /* libglfw.3.4.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3648760A2DD86C3B003C020C /* libglfw.3.4.dylib */; };
-		36CB649E2DE47E3E00D28071 /* libvulkan.1.4.313.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 364876052DD74EE2003C020C /* libvulkan.1.4.313.dylib */; };
-		36CB649F2DE47E3E00D28071 /* libvulkan.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 364876032DD74EDF003C020C /* libvulkan.1.dylib */; };
-		36CB64A02DE47ECF00D28071 /* libglfw.3.4.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3648760A2DD86C3B003C020C /* libglfw.3.4.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		36CB64A12DE47ECF00D28071 /* libvulkan.1.4.313.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 364876052DD74EE2003C020C /* libvulkan.1.4.313.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		36CB64A22DE47ECF00D28071 /* libvulkan.1.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 364876032DD74EDF003C020C /* libvulkan.1.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		366FD7A22DEB06DA00A38A0B /* libvulkan.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 364876032DD74EDF003C020C /* libvulkan.1.dylib */; };
+		366FD7A32DEB06E200A38A0B /* libvulkan.1.4.313.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 364876052DD74EE2003C020C /* libvulkan.1.4.313.dylib */; };
+		366FD7A42DEB06EC00A38A0B /* libglfw.3.4.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3648760A2DD86C3B003C020C /* libglfw.3.4.dylib */; };
+		366FD7A52DEB06F400A38A0B /* libglfw.3.4.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3648760A2DD86C3B003C020C /* libglfw.3.4.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		366FD7A62DEB06F400A38A0B /* libvulkan.1.4.313.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 364876052DD74EE2003C020C /* libvulkan.1.4.313.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		366FD7A72DEB06F400A38A0B /* libvulkan.1.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 364876032DD74EDF003C020C /* libvulkan.1.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -22,9 +22,9 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				36CB64A02DE47ECF00D28071 /* libglfw.3.4.dylib in CopyFiles */,
-				36CB64A12DE47ECF00D28071 /* libvulkan.1.4.313.dylib in CopyFiles */,
-				36CB64A22DE47ECF00D28071 /* libvulkan.1.dylib in CopyFiles */,
+				366FD7A52DEB06F400A38A0B /* libglfw.3.4.dylib in CopyFiles */,
+				366FD7A62DEB06F400A38A0B /* libvulkan.1.4.313.dylib in CopyFiles */,
+				366FD7A72DEB06F400A38A0B /* libvulkan.1.dylib in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -38,9 +38,22 @@
 		36BF5B252DDDD84E00AFA58D /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
+		366FD7AB2DEC5D7300A38A0B /* Exceptions for "VulkanLearning" folder in "Compile Sources" phase from "VulkanLearning" target */ = {
+			isa = PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet;
+			buildPhase = 364875F22DD7401C003C020C /* Sources */;
+			membershipExceptions = (
+				includes/main.h,
+			);
+		};
+/* End PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		364875F82DD7401C003C020C /* VulkanLearning */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				366FD7AB2DEC5D7300A38A0B /* Exceptions for "VulkanLearning" folder in "Compile Sources" phase from "VulkanLearning" target */,
+			);
 			path = VulkanLearning;
 			sourceTree = "<group>";
 		};
@@ -51,9 +64,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				36CB649D2DE47E1F00D28071 /* libglfw.3.4.dylib in Frameworks */,
-				36CB649E2DE47E3E00D28071 /* libvulkan.1.4.313.dylib in Frameworks */,
-				36CB649F2DE47E3E00D28071 /* libvulkan.1.dylib in Frameworks */,
+				366FD7A22DEB06DA00A38A0B /* libvulkan.1.dylib in Frameworks */,
+				366FD7A32DEB06E200A38A0B /* libvulkan.1.4.313.dylib in Frameworks */,
+				366FD7A42DEB06EC00A38A0B /* libglfw.3.4.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,17 +78,17 @@
 			children = (
 				364875F82DD7401C003C020C /* VulkanLearning */,
 				364876002DD74ABB003C020C /* Frameworks */,
-				364875F72DD7401C003C020C /* Products */,
+				364875F72DD7401C003C020C /* Products-old */,
 				36BF5B252DDDD84E00AFA58D /* .gitignore */,
 			);
 			sourceTree = "<group>";
 		};
-		364875F72DD7401C003C020C /* Products */ = {
+		364875F72DD7401C003C020C /* Products-old */ = {
 			isa = PBXGroup;
 			children = (
 				364875F62DD7401C003C020C /* VulkanLearning */,
 			);
-			name = Products;
+			name = "Products-old";
 			sourceTree = "<group>";
 		};
 		364876002DD74ABB003C020C /* Frameworks */ = {
@@ -124,6 +137,7 @@
 				TargetAttributes = {
 					364875F52DD7401C003C020C = {
 						CreatedOnToolsVersion = 16.1;
+						LastSwiftMigration = 1610;
 					};
 				};
 			};
@@ -137,7 +151,7 @@
 			mainGroup = 364875ED2DD7401C003C020C;
 			minimizedProjectReferenceProxies = 1;
 			preferredProjectObjectVersion = 77;
-			productRefGroup = 364875F72DD7401C003C020C /* Products */;
+			productRefGroup = 364875F72DD7401C003C020C /* Products-old */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -299,6 +313,7 @@
 		364875FE2DD7401C003C020C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
 				HEADER_SEARCH_PATHS = (
@@ -308,18 +323,23 @@
 				LD_RUNPATH_SEARCH_PATHS = (
 					/opt/homebrew/lib,
 					/usr/local/lib/VulkanSDK/1.4.313.0/macOS/lib,
+					/opt/homebrew/include,
+					/usr/local/lib/VulkanSDK/1.4.313.0/macOS/include,
 				);
 				LIBRARY_SEARCH_PATHS = (
 					/opt/homebrew/lib,
 					/usr/local/lib/VulkanSDK/1.4.313.0/macOS/lib,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 6.0;
 			};
 			name = Debug;
 		};
 		364875FF2DD7401C003C020C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
 				HEADER_SEARCH_PATHS = (
@@ -329,6 +349,8 @@
 				LD_RUNPATH_SEARCH_PATHS = (
 					/opt/homebrew/lib,
 					/usr/local/lib/VulkanSDK/1.4.313.0/macOS/lib,
+					/opt/homebrew/include,
+					/usr/local/lib/VulkanSDK/1.4.313.0/macOS/include,
 				);
 				LIBRARY_SEARCH_PATHS = (
 					/opt/homebrew/lib,
@@ -336,6 +358,7 @@
 				);
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 6.0;
 			};
 			name = Release;
 		};
