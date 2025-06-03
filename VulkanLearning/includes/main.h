@@ -10,3 +10,9 @@ struct QueueFamilyIndices {
         return graphicsFamily.has_value();
     }
 };
+
+struct SwapChainSupportDetails {
+    VkSurfaceCapabilitiesKHR capabilities;
+    std::vector<VkSurfaceFormatKHR> formats;
+    std::vector<VkPresentModeKHR> presentModes;
+};
