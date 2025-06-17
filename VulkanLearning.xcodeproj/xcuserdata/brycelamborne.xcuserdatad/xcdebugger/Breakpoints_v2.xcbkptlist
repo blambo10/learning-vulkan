@@ -15,8 +15,8 @@
             filePath = "VulkanLearning/main.cpp"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "482"
-            endingLineNumber = "482"
+            startingLineNumber = "483"
+            endingLineNumber = "483"
             landmarkName = "checkValidationLayerSupport()"
             landmarkType = "7">
          </BreakpointContent>
@@ -32,8 +32,8 @@
             filePath = "VulkanLearning/main.cpp"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "64"
-            endingLineNumber = "64"
+            startingLineNumber = "65"
+            endingLineNumber = "65"
             landmarkName = "initWindow()"
             landmarkType = "7">
          </BreakpointContent>
